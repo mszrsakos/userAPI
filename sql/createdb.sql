@@ -1,0 +1,1 @@
+create database if not exists user_api character set utf8_mb4 collate utf8_mb4_hungarian_ci
