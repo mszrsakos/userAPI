@@ -1,0 +1,21 @@
+const userService = require('../services/user.service');
+
+module.exports={
+
+    list:async(req, res)=>{
+        res.json(await userService.getAll());
+    },
+    get:async(req, res)=>{
+        res.json(await userService.getById(req.params.id));
+    },
+    create0:async(req, res)=>{
+        res.status(201).json(await userService.create(req.body));
+    },
+    update: async(req,res)=>{
+        res.json(await userService.update(req.params.id, req.body, req.user));
+    },
+    remove:async(req, res)=>{
+        res.status(204).json(await userService.remove(req.params.id));
+    }
+
+}
