@@ -4,3 +4,4 @@
 4. réteg: repository+teszt user.repository.js + node teszt parancs
 5. réteg: service réteg: utils -> AppError, service->repo függvényhívások
 6. réteg: user controller réteg: service hívások definiálása, json response
+7. réteg: routes, app.js, server.js

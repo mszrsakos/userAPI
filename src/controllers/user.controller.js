@@ -8,7 +8,7 @@ module.exports={
     get:async(req, res)=>{
         res.json(await userService.getById(req.params.id));
     },
-    create0:async(req, res)=>{
+    create:async(req, res)=>{
         res.status(201).json(await userService.create(req.body));
     },
     update: async(req,res)=>{
