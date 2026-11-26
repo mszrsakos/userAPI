@@ -1,6 +1,6 @@
-const app=require('./app')
-const config=require('./config')
-const{sequelize}=require('./mdoels')
+const app=require('./app');
+const config=require('./config');
+const{sequelize}=require('./models');
 
 (async()=>{
 try {
@@ -8,8 +8,7 @@ try {
     await sequelize.sync() //csak DEV//PROD? migracio pl knex
     app.listen(config.port, ()=>console.log(`Szerver fut: http://localhost:${config.port}`))
 } catch (error) {
-    
+    console.error('DB hiba!', error.message)
+    process.exit(1)
 }
-
-
 })();
